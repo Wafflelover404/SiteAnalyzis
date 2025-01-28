@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ivanafanasyeff/test
+CMAKE_SOURCE_DIR = /home/wafflelover404/Documents/projects/SiteAnalyzis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ivanafanasyeff/test/build
+CMAKE_BINARY_DIR = /home/wafflelover404/Documents/projects/SiteAnalyzis/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/ivanafanasyeff/test/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/homebrew/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ivanafanasyeff/test/build/CMakeFiles /Users/ivanafanasyeff/test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wafflelover404/Documents/projects/SiteAnalyzis/build/CMakeFiles /home/wafflelover404/Documents/projects/SiteAnalyzis/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ivanafanasyeff/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wafflelover404/Documents/projects/SiteAnalyzis/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_program
+# Target rules for targets named curl_parser
 
 # Build rule for target.
-my_program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_program
-.PHONY : my_program
+curl_parser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 curl_parser
+.PHONY : curl_parser
 
 # fast build rule for target.
-my_program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/build
-.PHONY : my_program/fast
+curl_parser/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/build
+.PHONY : curl_parser/fast
 
-curlClient.o: curlClient.cpp.o
-.PHONY : curlClient.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-curlClient.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/curlClient.cpp.o
-.PHONY : curlClient.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-curlClient.i: curlClient.cpp.i
-.PHONY : curlClient.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-curlClient.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/curlClient.cpp.i
-.PHONY : curlClient.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-curlClient.s: curlClient.cpp.s
-.PHONY : curlClient.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-curlClient.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/curlClient.cpp.s
-.PHONY : curlClient.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_program"
-	@echo "... curlClient.o"
-	@echo "... curlClient.i"
-	@echo "... curlClient.s"
+	@echo "... curl_parser"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

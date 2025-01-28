@@ -1,13 +1,8 @@
-#include <iostream>
-#include <ctime> 
+#include "curlClient.cpp"
+#include <string>
 
-const char* timeGet() {
-    time_t rawtime;
-    time(&rawtime);
-    return ctime(&rawtime); 
-}
-// Usage - std::cout << timeGet(); 
-
-int main() {
-    
+int32_t main() {
+    std::string url;
+    std::cin >> url;
+    std::cout << parseData(url);
 }

@@ -45,29 +45,29 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ivanafanasyeff/test
+CMAKE_SOURCE_DIR = /home/wafflelover404/Documents/projects/SiteAnalyzis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ivanafanasyeff/test/build
+CMAKE_BINARY_DIR = /home/wafflelover404/Documents/projects/SiteAnalyzis/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/my_program.dir/all
+all: CMakeFiles/curl_parser.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/my_program.dir/codegen
+codegen: CMakeFiles/curl_parser.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/my_program.dir/clean
+clean: CMakeFiles/curl_parser.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/my_program.dir
+# Target rules for target CMakeFiles/curl_parser.dir
 
 # All Build rule for target.
-CMakeFiles/my_program.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ivanafanasyeff/test/build/CMakeFiles --progress-num=1,2 "Built target my_program"
-.PHONY : CMakeFiles/my_program.dir/all
+CMakeFiles/curl_parser.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wafflelover404/Documents/projects/SiteAnalyzis/build/CMakeFiles --progress-num=1,2 "Built target curl_parser"
+.PHONY : CMakeFiles/curl_parser.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/my_program.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ivanafanasyeff/test/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/my_program.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ivanafanasyeff/test/build/CMakeFiles 0
-.PHONY : CMakeFiles/my_program.dir/rule
+CMakeFiles/curl_parser.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wafflelover404/Documents/projects/SiteAnalyzis/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/curl_parser.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wafflelover404/Documents/projects/SiteAnalyzis/build/CMakeFiles 0
+.PHONY : CMakeFiles/curl_parser.dir/rule
 
 # Convenience name for target.
-my_program: CMakeFiles/my_program.dir/rule
-.PHONY : my_program
+curl_parser: CMakeFiles/curl_parser.dir/rule
+.PHONY : curl_parser
 
 # codegen rule for target.
-CMakeFiles/my_program.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ivanafanasyeff/test/build/CMakeFiles --progress-num=1,2 "Finished codegen for target my_program"
-.PHONY : CMakeFiles/my_program.dir/codegen
+CMakeFiles/curl_parser.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wafflelover404/Documents/projects/SiteAnalyzis/build/CMakeFiles --progress-num=1,2 "Finished codegen for target curl_parser"
+.PHONY : CMakeFiles/curl_parser.dir/codegen
 
 # clean rule for target.
-CMakeFiles/my_program.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/clean
-.PHONY : CMakeFiles/my_program.dir/clean
+CMakeFiles/curl_parser.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/curl_parser.dir/build.make CMakeFiles/curl_parser.dir/clean
+.PHONY : CMakeFiles/curl_parser.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

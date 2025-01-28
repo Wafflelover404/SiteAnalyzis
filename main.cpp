@@ -43,7 +43,7 @@ class response {
         }
 
         void saveToFile () {
-            writeToFile(this->responseContent, this->filepath)
+            writeToFile(this->responseContent, this->filepath);
         }
 
     private:
@@ -62,10 +62,12 @@ int32_t main() {
     std::string content = parseData(url);
 
     responseCodes code = content.empty() ? Internet : Fine;
-    response resp(code, content);
+    response resp(code, content, "response.txt");
 
     std::cout << resp.getCode() << std::endl;
+    if (resp.getCode() != "Response recieved") return 0; 
     std::cout << "Last entry time: " << resp.getEntryTime() << std::endl;
+    resp.saveToFile();
 
     return 0;
 }
