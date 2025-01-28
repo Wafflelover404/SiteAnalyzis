@@ -1,8 +1,9 @@
-#include "curlClient.cpp"
-#include <string>
+#include <iostream>
 
 int32_t main() {
-    std::string url;
-    std::cin >> url;
-    std::cout << parseData(url);
+    int n = 3;
+    while (n-- ) {
+        std::cout << 'a';
+    }
+    std::cout << n;
 }

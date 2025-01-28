@@ -68,6 +68,6 @@ int32_t main() {
     if (resp.getCode() != "Response recieved") return 0; 
     std::cout << "Last entry time: " << resp.getEntryTime() << std::endl;
     resp.saveToFile();
-
+    
     return 0;
 }
